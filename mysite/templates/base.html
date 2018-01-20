@@ -29,7 +29,7 @@
         {% endblock %}
     </head>
 
-    <body class="{% block body_class %}{% endblock %}">
+    <body class="{% block body_class %}{% endblock %}" {% block extra_body_attrs %}{% endblock %}>
         {% wagtailuserbar %}
 
         {% block content %}{% endblock %}
