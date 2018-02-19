@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 
-{% load wagtailcore_tags %}
+{% load wagtailcore_tags home_tags %}
 
 {% block title %}
     {{ block.super }}
@@ -245,73 +245,7 @@
           <div class="services-boxes-2">
 
             <div class="row">
-
-            <!-- Service -->
-            <div class="col-sm-4">
-              <div class="service-post text-center">
-                <div class="service-icon-2">
-                  <span class="icon-tools"></span>
-                </div>
-                <h4>DESIGNS &amp; INTERFACES</h4>
-                <p>Mauris eros tortor, tristique cursus porttitor et, luctus sed urna. Quisque id libero risus. Aliquam accumsan erat id sem placerat tempus.</p>
-              </div> <!-- End service-post -->
-            </div> <!-- End col-sm-4 -->
-
-            <!-- Service -->
-            <div class="col-sm-4">
-              <div class="service-post text-center">
-                <div class="service-icon-2">
-                  <span class="icon-mobile"></span>
-                </div>
-                <h4>Responsive design</h4>
-                <p>Mauris eros tortor, tristique cursus porttitor et, luctus sed urna. Quisque id libero risus. Aliquam accumsan erat id sem placerat tempus.</p>
-              </div> <!-- End service-post -->
-            </div> <!-- End col-sm-4 -->
-
-            <!-- Service -->
-            <div class="col-sm-4">
-              <div class="service-post text-center">
-                <div class="service-icon-2">
-                  <span class="icon-gears"></span>
-                </div>
-                <h4>Creative solutions</h4>
-                <p>Mauris eros tortor, tristique cursus porttitor et, luctus sed urna. Quisque id libero risus. Aliquam accumsan erat id sem placerat tempus.</p>
-              </div> <!-- End service-post -->
-            </div> <!-- End col-sm-4 -->
-
-            <!-- Service -->
-            <div class="col-sm-4">
-              <div class="service-post text-center">
-                <div class="service-icon-2">
-                  <span class="icon-printer"></span>
-                </div>
-                <h4>Print</h4>
-                <p>Mauris eros tortor, tristique cursus porttitor et, luctus sed urna. Quisque id libero risus. Aliquam accumsan erat id sem placerat tempus.</p>
-              </div> <!-- End service-post -->
-            </div> <!-- End col-sm-4 -->
-
-            <!-- Service -->
-            <div class="col-sm-4">
-              <div class="service-post text-center">
-                <div class="service-icon-2">
-                  <span class="icon-basket"></span>
-                </div>
-                <h4>eCommerce</h4>
-                <p>Mauris eros tortor, tristique cursus porttitor et, luctus sed urna. Quisque id libero risus. Aliquam accumsan erat id sem placerat tempus.</p>
-              </div> <!-- End service-post -->
-            </div> <!-- End col-sm-4 -->
-
-            <!-- Service -->
-            <div class="col-sm-4">
-              <div class="service-post text-center">
-                <div class="service-icon-2">
-                  <span class="icon-lifesaver"></span>
-                </div>
-                <h4>Dedicated support</h4>
-                <p>Mauris eros tortor, tristique cursus porttitor et, luctus sed urna. Quisque id libero risus. Aliquam accumsan erat id sem placerat tempus.</p>
-              </div> <!-- End service-post -->
-            </div> <!-- End col-sm-4 -->
-
+              {% services %}
             </div> <!-- End row -->
 
           </div> <!-- End services-boxes -->
@@ -622,23 +556,7 @@
               <div class="testimonials-carousel">
                 <ul class="testimonials-slider">
                   <!-- Testimonial -->
-                  <li>
-                    <img src="static/images/temp/client-photo.jpg" alt="">
-                    <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculusultricies porta.</p>
-                    <div class="testimonials-author"> ClasDesign - Front End Developer </div>
-                  </li>
-                  <!-- Testimonial -->
-                  <li>
-                    <img src="static/images/temp/client-photo.jpg" alt="">
-                    <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur<a href="#">http://goo.gl/1OhxkS</a>.</p>
-                    <div class="testimonials-author">John Doe -  Web Developer</div>
-                  </li>
-                  <!-- Testimonial -->
-                  <li>
-                    <img src="static/images/temp/client-photo.jpg" alt="">
-                    <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur. <a href="#">http://goo.gl/1OhxkS</a>.</p>
-                    <div class="testimonials-author">John Doe - Web Designer</div>
-                  </li>
+                  {% team_members %}
                 </ul>
               </div> <!-- end testimonials-carousel -->
             </div> <!-- end col-md-8 -->

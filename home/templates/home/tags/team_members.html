@@ -1,0 +1,7 @@
+{% for member in team_members %}
+<li>
+    <img src="static/images/temp/client-photo.jpg" alt="">
+    {{ member.title|safe }}
+    <div class="testimonials-author">{{ member.text|safe }}</div>
+</li>
+{% endfor %}

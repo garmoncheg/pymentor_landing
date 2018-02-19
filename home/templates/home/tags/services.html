@@ -1,0 +1,11 @@
+{% for service in services %}
+<div class="col-sm-4">
+  <div class="service-post text-center">
+    <div class="service-icon-2">
+      <span class="{{ service.icon|default:'icon-tools' }}"></span>
+    </div>
+    <h4>{{ service.title|safe }}</h4>
+    <p>{{ service.text|safe }}</p>
+  </div> <!-- End service-post -->
+</div> <!-- End col-sm-4 -->
+{% endfor %}
