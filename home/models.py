@@ -9,9 +9,19 @@ from wagtail.wagtailsnippets.models import register_snippet
 
 class HomePage(Page):
     body = RichTextField(blank=True)
+    team_description = models.ForeignKey(
+        'home.TeamDescription',
+        null=True,
+        blank=True,
+        on_delete=models.SET_NULL,
+        related_name='+'
+    )
+    slogan = models.CharField(max_length=255)
 
     content_panels = Page.content_panels + [
         FieldPanel('body', classname="full"),
+        FieldPanel('team_description'),
+        FieldPanel('slogan')
     ]
 
 
@@ -22,7 +32,7 @@ class ProjectSnippet(models.Model):
 
     panels = [
         FieldPanel('title'),
-        FieldPanel('text')
+        FieldPanel('text'),
     ]
 
     def __str__(self):
@@ -81,11 +91,11 @@ class ServiceSnippet(models.Model):
 @register_snippet
 class OfferSnippet(models.Model):
     title = models.CharField(max_length=255)
-    text = RichTextField(blank=True)
+    description = RichTextField(blank=True)
 
     panels = [
         FieldPanel('title'),
-        FieldPanel('text')
+        FieldPanel('description')
     ]
 
     def __str__(self):
@@ -104,3 +114,18 @@ class WhyChooseSnippet(models.Model):
 
     def __str__(self):
         return self.title
+
+
+@register_snippet
+class TeamDescription(models.Model):
+    title = models.CharField(max_length=255)
+    text = RichTextField(blank=True)
+
+    panels = [
+        FieldPanel('title'),
+        FieldPanel('text')
+    ]
+
+    def __str__(self):
+        return self.title
+

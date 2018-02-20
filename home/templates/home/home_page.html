@@ -104,55 +104,7 @@
 
   <div id="wrapper">
 
-    <!-- Hero
-    ================================================== -->
-    <section id="section1">
-      <div id="hero-section" class="creative-hero-page-2" data-stellar-background-ratio="0">
-        <div class="hero-content">
-          <div class="container">
-            <div class="row">
-              <div class="col-md-8 col-md-offset-2">
-                <div class="hero-text">
-                  <div class="herolider">
-                    <ul class="caption-slides text-center">
-
-                      <li class="caption">
-                        <h1>Сайт должен работать</h1>
-                        <div class="div-line"></div>
-                        <p class="hero">Ваш сайт будет приводить новых клиентов</p>
-                        <div class="call-to-action">
-                          <a href="#contact-section" class="section-scroll btn btn-md btn-clean">Приступить</a>
-                        </div>
-                      </li>
-
-                      <li class="caption">
-                        <h1>Автоматизируем все бизнес процессы</h1>
-                        <div class="div-line"></div>
-                        <p class="hero"></p>
-                        <div class="call-to-action">
-                          <a href="#contact-section" class="section-scroll btn btn-md btn-clean">Приступить</a>
-                        </div>
-                      </li>
-
-                      <li class="caption">
-                        <h1>Надежные и проверенные технологии</h1>
-                        <div class="div-line"></div>
-                        <p class="hero">HTML5 &amp; CSS3 &amp; Django &amp; Angular</p>
-                        <div class="call-to-action">
-                          <a href="#contact-section" class="section-scroll btn btn-md btn-clean">Get started</a>
-                        </div>
-                      </li>
-
-                    </ul>
-                  </div> <!-- end herolider -->
-                </div> <!-- End hero-text -->
-              </div> <!-- end col-md-6 -->
-            </div> <!-- end row -->
-          </div> <!-- End container -->
-        </div> <!-- End hero-content -->
-      </div> <!-- End hero-section -->
-    </section>
-    <!-- End hero section -->
+    {% offers %}
 
     <section id="section2">
       <div id="about-skills-sec" class="pad-sec">
@@ -161,22 +113,21 @@
             <div class="row">
               <div class="col-md-6 col-sm-6 col-xs-12">
                 <div class="title-section">
-                  <h3>Мы специализируемся в следующем</h3>
+                  <h3>{{ page.team_description.title }}</h3>
                 </div>
-                <p>Sit ad etiam dissentias, viderer intellegebat usu et, per aliquam delectus ut. In inermis suavitate tincidunt quo, habeo lorem quis nulla eget, dictum pretium magna. Praesent id metus mattis tellus consectetur posuere. Aenean vel enim ut massa luctus efficitur a nec magna.</p>
-                <p>Sit ad etiam dissentias, viderer intellegebat usu et, per aliquam delectus ut. In inermis suavitate tincidunt quo, habeo lorem quis nulla eget, dictum pretium magna. Praesent id metus mattis tellus consectetur posuere.</p>
+                {{ page.team_description.text|safe }}
               </div> <!-- end col-md-6 -->
               <div class="col-md-6 col-sm-6 col-xs-12">
                 <div class="progress-bars">
                   <!-- skillbar -->
                   <div class="p-bar">
                     <div class="progress">
-                      <div class="progress-bar" aria-valuenow="75" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
+                      <div class="progress-bar" aria-valuenow="100" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
                     </div>
                     <!-- meta -->
                     <div class="progress-meta">
-                      <h6 class="progress-title">photoshop</h6>
-                      <h6 class="progress-value">75%</h6>
+                      <h6 class="progress-title">Django</h6>
+                      <h6 class="progress-value">100%</h6>
                     </div>
                   </div> <!-- end p-bar -->
                   <!-- skillbar -->
@@ -186,30 +137,30 @@
                     </div>
                     <!-- meta -->
                     <div class="progress-meta">
-                      <h6 class="progress-title">html</h6>
+                      <h6 class="progress-title">Angular</h6>
                       <h6 class="progress-value">95%</h6>
                     </div>
                   </div> <!-- end p-bar -->
                   <!-- skillbar -->
                   <div class="p-bar">
                     <div class="progress">
-                      <div class="progress-bar" aria-valuenow="85" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
+                      <div class="progress-bar" aria-valuenow="100" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
                     </div>
                     <!-- meta -->
                     <div class="progress-meta">
-                      <h6 class="progress-title">css</h6>
-                      <h6 class="progress-value">85%</h6>
+                      <h6 class="progress-title">html5</h6>
+                      <h6 class="progress-value">100%</h6>
                     </div>
                   </div> <!-- end p-bar -->
                   <!-- skillbar -->
                   <div class="p-bar">
                     <div class="progress">
-                      <div class="progress-bar" aria-valuenow="73" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
+                      <div class="progress-bar" aria-valuenow="95" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
                     </div>
                     <!-- meta -->
                     <div class="progress-meta">
-                      <h6 class="progress-title">jquery</h6>
-                      <h6 class="progress-value">73%</h6>
+                      <h6 class="progress-title">css3</h6>
+                      <h6 class="progress-value">95%</h6>
                     </div>
                   </div> <!-- end p-bar -->
                 </div> <!-- end skills-bars -->
@@ -262,7 +213,7 @@
           <div class="row">
             <div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1">
               <em></em>
-              <h2>Точка отсчета любого достижение - это желание и вера</h2>
+              <h2>{{ page.slogan }}</h2>
               <a href="#s" class="section-scroll btn btn-lg btn-rounded btn-clean">Buy now</a>
             </div> <!-- end col-md-8 -->
           </div> <!-- end row -->
@@ -271,153 +222,153 @@
     </section>
     <!-- Agency history -->
 
-    <!-- Portfolio
-    ================================================== -->
-    <section id="section5">
-      <div id="portfolio-section" class="pad-sec">
+    <!--&lt;!&ndash; Portfolio-->
+    <!--================================================== &ndash;&gt;-->
+    <!--<section id="section5">-->
+      <!--<div id="portfolio-section" class="pad-sec">-->
 
-        <div class="container">
-          <div class="title-section pad-bt-60">
-            <div class="row">
-              <div class="col-sm-6">
-                <h2>Our works</h2>
-                <div class="divider"></div>
-              </div> <!-- End col-sm-6 -->
-              <div class="col-sm-6">
-                <p>Sed ac mattis justo. Vestibulum facilisis at arcu ac porta. Vivamus at ipsum at quam hendrerit gravida.</p>
-              </div> <!-- End col-sm-6 -->
-            </div> <!-- End row -->
-          </div> <!-- End title-section -->
-        </div> <!-- end container -->
+        <!--<div class="container">-->
+          <!--<div class="title-section pad-bt-60">-->
+            <!--<div class="row">-->
+              <!--<div class="col-sm-6">-->
+                <!--<h2>Our works</h2>-->
+                <!--<div class="divider"></div>-->
+              <!--</div> &lt;!&ndash; End col-sm-6 &ndash;&gt;-->
+              <!--<div class="col-sm-6">-->
+                <!--<p>Sed ac mattis justo. Vestibulum facilisis at arcu ac porta. Vivamus at ipsum at quam hendrerit gravida.</p>-->
+              <!--</div> &lt;!&ndash; End col-sm-6 &ndash;&gt;-->
+            <!--</div> &lt;!&ndash; End row &ndash;&gt;-->
+          <!--</div> &lt;!&ndash; End title-section &ndash;&gt;-->
+        <!--</div> &lt;!&ndash; end container &ndash;&gt;-->
 
-        <div class="portfolio-content">
+        <!--<div class="portfolio-content">-->
 
-          <!-- Filters -->
-          <div class="filter-control">
-            <div class="container">
-              <div class="row">
-                <div class="col-xs-12">
-                  <ul class="filter-list">
-                    <li><a class="filter active" data-filter="*">All</a></li>
-                    <li><a class="filter" data-filter=".branding">Branding</a></li>
-                    <li><a class="filter" data-filter=".web">Web</a></li>
-                    <li><a class="filter" data-filter=".photography">Photography</a></li>
-                  </ul>
-                </div> <!-- end col-xs-12 -->
-              </div> <!-- end row -->
-            </div> <!-- end container -->
-          </div> <!-- end filter-control -->
+          <!--&lt;!&ndash; Filters &ndash;&gt;-->
+          <!--<div class="filter-control">-->
+            <!--<div class="container">-->
+              <!--<div class="row">-->
+                <!--<div class="col-xs-12">-->
+                  <!--<ul class="filter-list">-->
+                    <!--<li><a class="filter active" data-filter="*">All</a></li>-->
+                    <!--<li><a class="filter" data-filter=".branding">Branding</a></li>-->
+                    <!--<li><a class="filter" data-filter=".web">Web</a></li>-->
+                    <!--<li><a class="filter" data-filter=".photography">Photography</a></li>-->
+                  <!--</ul>-->
+                <!--</div> &lt;!&ndash; end col-xs-12 &ndash;&gt;-->
+              <!--</div> &lt;!&ndash; end row &ndash;&gt;-->
+            <!--</div> &lt;!&ndash; end container &ndash;&gt;-->
+          <!--</div> &lt;!&ndash; end filter-control &ndash;&gt;-->
 
-          <!-- Portfolio items -->
-          <div class="portfolio-items animated out" data-animation="fadeInUp" data-delay="0">
+          <!--&lt;!&ndash; Portfolio items &ndash;&gt;-->
+          <!--<div class="portfolio-items animated out" data-animation="fadeInUp" data-delay="0">-->
 
-            <div class="container thin-gall">
-              <div class="row gallery-masory" id="filter">
+            <!--<div class="container thin-gall">-->
+              <!--<div class="row gallery-masory" id="filter">-->
 
-                <!-- Portfolio item -->
-                <div class="col-md-4 col-sm-6 col-xs-12 gallery-item branding photography">
-                  <div class="project-item">
-                    <a href="single-project-2.html">
-                      <img src="static/images/portfolio/fw-3col-1.jpg" alt="">
-                      <div class="overlay">
-                        <div class="overlay-inner">
-                          <h4>Project Title</h4>
-                          <p>Product Design. Branding.</p>
-                        </div> <!-- End overlay-inner -->
-                      </div> <!-- End overlay -->
-                    </a>
-                  </div><!-- End project-item -->
-                </div> <!-- End col-md-4 -->
+                <!--&lt;!&ndash; Portfolio item &ndash;&gt;-->
+                <!--<div class="col-md-4 col-sm-6 col-xs-12 gallery-item branding photography">-->
+                  <!--<div class="project-item">-->
+                    <!--<a href="single-project-2.html">-->
+                      <!--<img src="static/images/portfolio/fw-3col-1.jpg" alt="">-->
+                      <!--<div class="overlay">-->
+                        <!--<div class="overlay-inner">-->
+                          <!--<h4>Project Title</h4>-->
+                          <!--<p>Product Design. Branding.</p>-->
+                        <!--</div> &lt;!&ndash; End overlay-inner &ndash;&gt;-->
+                      <!--</div> &lt;!&ndash; End overlay &ndash;&gt;-->
+                    <!--</a>-->
+                  <!--</div>&lt;!&ndash; End project-item &ndash;&gt;-->
+                <!--</div> &lt;!&ndash; End col-md-4 &ndash;&gt;-->
 
-                <!-- Portfolio item -->
-                <div class="col-md-4 col-sm-6 col-xs-12 gallery-item branding">
-                  <div class="project-item">
-                    <a href="single-project-3.html">
-                      <img src="static/images/portfolio/fw-3col-2.jpg" alt="">
-                      <div class="overlay">
-                        <div class="overlay-inner">
-                          <h4>Project Title</h4>
-                          <p>Product Design. Branding.</p>
-                        </div> <!-- End overlay-inner -->
-                      </div> <!-- End overlay -->
-                    </a>
-                  </div><!-- End project-item -->
-                </div> <!-- End col-md-4 -->
+                <!--&lt;!&ndash; Portfolio item &ndash;&gt;-->
+                <!--<div class="col-md-4 col-sm-6 col-xs-12 gallery-item branding">-->
+                  <!--<div class="project-item">-->
+                    <!--<a href="single-project-3.html">-->
+                      <!--<img src="static/images/portfolio/fw-3col-2.jpg" alt="">-->
+                      <!--<div class="overlay">-->
+                        <!--<div class="overlay-inner">-->
+                          <!--<h4>Project Title</h4>-->
+                          <!--<p>Product Design. Branding.</p>-->
+                        <!--</div> &lt;!&ndash; End overlay-inner &ndash;&gt;-->
+                      <!--</div> &lt;!&ndash; End overlay &ndash;&gt;-->
+                    <!--</a>-->
+                  <!--</div>&lt;!&ndash; End project-item &ndash;&gt;-->
+                <!--</div> &lt;!&ndash; End col-md-4 &ndash;&gt;-->
 
-                <!-- Portfolio item -->
-                <div class="col-md-4 col-sm-6 col-xs-12 gallery-item photography">
-                  <div class="project-item">
-                    <a href="single-project-4.html">
-                      <img src="static/images/portfolio/fw-3col-3.jpg" alt="">
-                      <div class="overlay">
-                        <div class="overlay-inner">
-                          <h4>Project Title</h4>
-                          <p>Product Design. Branding.</p>
-                        </div> <!-- End overlay-inner -->
-                      </div> <!-- End overlay -->
-                    </a>
-                  </div><!-- End project-item -->
-                </div> <!-- End col-md-4 -->
+                <!--&lt;!&ndash; Portfolio item &ndash;&gt;-->
+                <!--<div class="col-md-4 col-sm-6 col-xs-12 gallery-item photography">-->
+                  <!--<div class="project-item">-->
+                    <!--<a href="single-project-4.html">-->
+                      <!--<img src="static/images/portfolio/fw-3col-3.jpg" alt="">-->
+                      <!--<div class="overlay">-->
+                        <!--<div class="overlay-inner">-->
+                          <!--<h4>Project Title</h4>-->
+                          <!--<p>Product Design. Branding.</p>-->
+                        <!--</div> &lt;!&ndash; End overlay-inner &ndash;&gt;-->
+                      <!--</div> &lt;!&ndash; End overlay &ndash;&gt;-->
+                    <!--</a>-->
+                  <!--</div>&lt;!&ndash; End project-item &ndash;&gt;-->
+                <!--</div> &lt;!&ndash; End col-md-4 &ndash;&gt;-->
 
-                <!-- Portfolio item -->
-                <div class="col-md-4 col-sm-6 col-xs-12 gallery-item web">
-                  <div class="project-item">
-                    <a href="single-project-5.html">
-                      <img src="static/images/portfolio/fw-3col-4.jpg" alt="">
-                      <div class="overlay">
-                        <div class="overlay-inner">
-                          <h4>Project Title</h4>
-                          <p>Product Design. Branding.</p>
-                        </div> <!-- End overlay-inner -->
-                      </div> <!-- End overlay -->
-                    </a>
-                  </div><!-- End project-item -->
-                </div> <!-- End col-md-4 -->
+                <!--&lt;!&ndash; Portfolio item &ndash;&gt;-->
+                <!--<div class="col-md-4 col-sm-6 col-xs-12 gallery-item web">-->
+                  <!--<div class="project-item">-->
+                    <!--<a href="single-project-5.html">-->
+                      <!--<img src="static/images/portfolio/fw-3col-4.jpg" alt="">-->
+                      <!--<div class="overlay">-->
+                        <!--<div class="overlay-inner">-->
+                          <!--<h4>Project Title</h4>-->
+                          <!--<p>Product Design. Branding.</p>-->
+                        <!--</div> &lt;!&ndash; End overlay-inner &ndash;&gt;-->
+                      <!--</div> &lt;!&ndash; End overlay &ndash;&gt;-->
+                    <!--</a>-->
+                  <!--</div>&lt;!&ndash; End project-item &ndash;&gt;-->
+                <!--</div> &lt;!&ndash; End col-md-4 &ndash;&gt;-->
 
-                <!-- Portfolio item -->
-                <div class="col-md-4 col-sm-6 col-xs-12 gallery-item web photography">
-                  <div class="project-item">
-                    <a href="single-project-6.html">
-                      <img src="static/images/portfolio/fw-3col-5.jpg" alt="">
-                      <div class="overlay">
-                        <div class="overlay-inner">
-                          <h4>Project Title</h4>
-                          <p>Product Design. Branding.</p>
-                        </div> <!-- End overlay-inner -->
-                      </div> <!-- End overlay -->
-                    </a>
-                  </div><!-- End project-item -->
-                </div> <!-- End col-md-64-->
+                <!--&lt;!&ndash; Portfolio item &ndash;&gt;-->
+                <!--<div class="col-md-4 col-sm-6 col-xs-12 gallery-item web photography">-->
+                  <!--<div class="project-item">-->
+                    <!--<a href="single-project-6.html">-->
+                      <!--<img src="static/images/portfolio/fw-3col-5.jpg" alt="">-->
+                      <!--<div class="overlay">-->
+                        <!--<div class="overlay-inner">-->
+                          <!--<h4>Project Title</h4>-->
+                          <!--<p>Product Design. Branding.</p>-->
+                        <!--</div> &lt;!&ndash; End overlay-inner &ndash;&gt;-->
+                      <!--</div> &lt;!&ndash; End overlay &ndash;&gt;-->
+                    <!--</a>-->
+                  <!--</div>&lt;!&ndash; End project-item &ndash;&gt;-->
+                <!--</div> &lt;!&ndash; End col-md-64&ndash;&gt;-->
 
-                <!-- Portfolio item -->
-                <div class="col-md-4 col-sm-6 col-xs-12 gallery-item branding web photography">
-                  <div class="project-item">
-                    <a href="single-project-7.html">
-                      <img src="static/images/portfolio/fw-3col-6.jpg" alt="">
-                      <div class="overlay">
-                        <div class="overlay-inner">
-                          <h4>Project Title</h4>
-                          <p>Product Design. Branding.</p>
-                        </div> <!-- End overlay-inner -->
-                      </div> <!-- End overlay -->
-                    </a>
-                  </div><!-- End project-item -->
-                </div> <!-- End col-md-4 -->
+                <!--&lt;!&ndash; Portfolio item &ndash;&gt;-->
+                <!--<div class="col-md-4 col-sm-6 col-xs-12 gallery-item branding web photography">-->
+                  <!--<div class="project-item">-->
+                    <!--<a href="single-project-7.html">-->
+                      <!--<img src="static/images/portfolio/fw-3col-6.jpg" alt="">-->
+                      <!--<div class="overlay">-->
+                        <!--<div class="overlay-inner">-->
+                          <!--<h4>Project Title</h4>-->
+                          <!--<p>Product Design. Branding.</p>-->
+                        <!--</div> &lt;!&ndash; End overlay-inner &ndash;&gt;-->
+                      <!--</div> &lt;!&ndash; End overlay &ndash;&gt;-->
+                    <!--</a>-->
+                  <!--</div>&lt;!&ndash; End project-item &ndash;&gt;-->
+                <!--</div> &lt;!&ndash; End col-md-4 &ndash;&gt;-->
 
-              </div> <!-- End gallery-masory -->
-            </div> <!-- end container -->
+              <!--</div> &lt;!&ndash; End gallery-masory &ndash;&gt;-->
+            <!--</div> &lt;!&ndash; end container &ndash;&gt;-->
 
-          </div> <!-- end portfolio-items -->
+          <!--</div> &lt;!&ndash; end portfolio-items &ndash;&gt;-->
 
-        </div> <!-- end portfolio-content -->
+        <!--</div> &lt;!&ndash; end portfolio-content &ndash;&gt;-->
 
-      <div class="call-to-action text-center animated fadeInUp in" data-animation="fadeInUp" data-delay="0">
-        <a href="portfolio-masonry-thin-boxed-3col.html" class="btn btn-lg btn-primary">View all projects</a>
-      </div> <!-- end call-to-action -->
+      <!--<div class="call-to-action text-center animated fadeInUp in" data-animation="fadeInUp" data-delay="0">-->
+        <!--<a href="portfolio-masonry-thin-boxed-3col.html" class="btn btn-lg btn-primary">View all projects</a>-->
+      <!--</div> &lt;!&ndash; end call-to-action &ndash;&gt;-->
 
-      </div> <!-- end portfolio-section -->
-    </section>
-    <!-- Portfolio -->
+      <!--</div> &lt;!&ndash; end portfolio-section &ndash;&gt;-->
+    <!--</section>-->
+    <!--&lt;!&ndash; Portfolio &ndash;&gt;-->
 
     <!-- Choose
     ================================================== -->
@@ -497,7 +448,7 @@
 
             <div class="col-md-5 col-md-pull-7">
               <div class="choose-image animated out" data-animation="fadeInLeft" data-delay="0">
-                <img src="static/images/temp/device.png" alt="">
+                <img src="static/images/website-choose.jpg" alt="">
               </div> <!-- end choose-image -->
             </div> <!-- end col-md-5 -->
 
@@ -546,26 +497,7 @@
       </div> <!-- end subscribe-section -->
     </section>
 
-    <!-- Testimonial
-    ================================================== -->
-    <section>
-      <div id="testimonials-section">
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
-              <div class="testimonials-carousel">
-                <ul class="testimonials-slider">
-                  <!-- Testimonial -->
-                  {% team_members %}
-                </ul>
-              </div> <!-- end testimonials-carousel -->
-            </div> <!-- end col-md-8 -->
-          </div> <!-- end row -->
-        </div> <!-- end container -->
-      </div>
-    </section>
-    <!-- end testimonial section -->
-
+    {% team_members %}
   </div> <!-- End wrapper -->
 
   <!-- Footer

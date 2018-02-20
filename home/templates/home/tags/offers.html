@@ -1,0 +1,31 @@
+<!-- Hero
+================================================== -->
+<section id="section1">
+  <div id="hero-section" class="creative-hero-page-2" data-stellar-background-ratio="0">
+    <div class="hero-content">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 col-md-offset-2">
+            <div class="hero-text">
+              <div class="herolider">
+                <ul class="caption-slides text-center">
+
+                    {% for offer in offers %}
+                    <li class="caption">
+                        <h1>{{ offer.title }}</h1>
+                        <div class="div-line"></div>
+                        <p class="hero">{{ offer.description|safe }}</p>
+                        <div class="call-to-action">
+                            <a href="#contact-section" class="section-scroll btn btn-md btn-clean">Приступить</a>
+                        </div>
+                    </li>
+                    {% endfor %}
+                </ul>
+              </div> <!-- end herolider -->
+            </div> <!-- End hero-text -->
+          </div> <!-- end col-md-6 -->
+        </div> <!-- end row -->
+      </div> <!-- End container -->
+    </div> <!-- End hero-content -->
+  </div> <!-- End hero-section -->
+</section>

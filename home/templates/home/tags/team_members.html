@@ -1,7 +1,25 @@
-{% for member in team_members %}
-<li>
-    <img src="static/images/temp/client-photo.jpg" alt="">
-    {{ member.title|safe }}
-    <div class="testimonials-author">{{ member.text|safe }}</div>
-</li>
-{% endfor %}
+<!-- Testimonial
+================================================== -->
+<section>
+  <div id="testimonials-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
+          <div class="testimonials-carousel">
+            <ul class="testimonials-slider">
+              <!-- Testimonial -->
+                {% for member in team_members %}
+                <li>
+                    <img src="static/images/temp/client-photo.jpg" alt="">
+                    {{ member.title|safe }}
+                    <div class="testimonials-author">{{ member.text|safe }}</div>
+                </li>
+                {% endfor %}
+            </ul>
+          </div> <!-- end testimonials-carousel -->
+        </div> <!-- end col-md-8 -->
+      </div> <!-- end row -->
+    </div> <!-- end container -->
+  </div>
+</section>
+<!-- end testimonial section -->

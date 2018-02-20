@@ -1,5 +1,5 @@
 from django import template
-from home.models import TeamMemberSnippet, ServiceSnippet
+from home.models import TeamMemberSnippet, ServiceSnippet, OfferSnippet
 
 register = template.Library()
 
@@ -17,4 +17,12 @@ def services(context):
     return {
         'services': ServiceSnippet.objects.all(),
         'request': context['request'],
+    }
+
+
+@register.inclusion_tag('home/tags/offers.html', takes_context=True)
+def offers(context):
+    return {
+        'offers': OfferSnippet.objects.all(),
+        'request': context['request']
     }
