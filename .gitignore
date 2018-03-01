@@ -5,6 +5,8 @@
 
 .idea
 
+# Bitbucket pipelines
+bitbucket-pipelines.yml
 
 # CMake
 cmake-build-debug/
